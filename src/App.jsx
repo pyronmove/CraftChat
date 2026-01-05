@@ -20,11 +20,11 @@ function App() {
             <span className="text-orange-500">Craft</span>
             <span className="text-blue-600">Chat</span>
           </h1>
-          <p className="text-base/loose mb-6 opacity-50">Saya mempunyai ketertarikan dalam bidang Programming dan Designer, terutama pada pembuatan Website dan Desain seperti Poster, Pamflet serta Banner, ketertarikan pada bidang ini sudah berlangsung lebih dari 4 Tahun untuk semua Bidang.</p>
+          <p className="text-base/loose mb-6 opacity-50">Tingkatkan performa bisnis Anda dengan AI Customer Service dan produk digital inovatif. Kami menghadirkan sistem otomatis yang siap membantu melayani pelanggan secara efisien, kapan pun dibutuhkan.</p>
           <div className="flex items-center sm:ap-4 gap-2">
-            <a href="#" className="bg-orange-600 p-4 rounded-2xl hover:bg-orange-500">Chat Admin <i class="ri-whatsapp-line" ></i>
+            <a href="https://wa.me/+6282141608587" className="bg-orange-600 p-4 rounded-2xl hover:bg-orange-500">Chat Admin <i class="ri-whatsapp-line" ></i>
             </a>
-            <a href="#" className="bg-zinc-700 p-4 rounded-2xl hover:bg-zinc-600">Lihat Proyeck <i className="ri-arrow-down-line"></i></a>
+            <a href="#proyek" className="bg-zinc-700 p-4 rounded-2xl hover:bg-zinc-600">Lihat Proyeck <i className="ri-arrow-down-line"></i></a>
           </div>
         </div>
         <div className="
@@ -63,19 +63,19 @@ function App() {
       <div className="tentang mt-32 py-10" id="tentang">
         <div className="xl:w-2/3 lg:w-3/4 w-full mx-auto p-7 bg-zinc-800 rounded-lg" data-aos="fade-up" data-aos-duration="500">
           <img src={dataImage.iconLogoWhite} alt="Image" className="w-12 rounded-md mb-10 sm:hidden" loading="lazy" />
-          <p className="text-base/loose mb-10">Hi, perkenalkan saya Diky Prayoga, seorang Full Stack Web Developer dan Designer untuk UI/UX Design maupun Product Digital, Saya percaya bahwa desain dan fungsionalitas harus berjalan beriringan, sehingga setiap proyek yang saya kembangkan tidak hanya terlihat menarik tetapi juga memberikan pengalaman pengguna yang optimal.</p>
+          <p className="text-base/loose mb-10">CraftChat adalah penyedia solusi AI Customer Service dan produk digital yang membantu bisnis menghadirkan layanan pelanggan otomatis, cepat, dan profesional. Kami menghadirkan sistem cerdas yang dirancang untuk meningkatkan efisiensi layanan serta pengalaman pelanggan.</p>
           <div className="flex items-center justify-between">
             <img src={dataImage.iconLogoWhite} alt="Image" className="w-12 rounded-md sm:block hidden" loading="lazy" />
             <div className="flex items-center gap-6">
               <div>
                 <h1 className="text-4xl mb-1">
-                  45<span className="text-violet-500">+</span>
+                  45<span className="text-blue-600">+</span>
                 </h1>
                 <p>Proyek selesai</p>
               </div>
               <div>
                 <h1 className="text-4xl mb-1">
-                  4<span className="text-violet-500">+</span>
+                  4<span className="text-blue-600">+</span>
                 </h1>
                 <p>Tahun pengalaman</p>
               </div>

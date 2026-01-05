@@ -12,8 +12,8 @@ const Chatbot = () => {
             type: "text",
             text: "Halo 👋 Ada yang bisa saya bantu?",
             buttons: [
-                { label: "💻 Website", value: "website" },
-                { label: "🤖 Chatbot", value: "chatbot" }
+                { label: "Website", value: "website" },
+                { label: "Chatbot", value: "chatbot" }
             ]
         }
     ])
@@ -44,13 +44,13 @@ const Chatbot = () => {
                 type: "image",
                 url: dataImage.Proyek12,
                 text: "Ini contoh website kami 👇",
-                buttons: [{ label: "📩 Chat Admin", value: "admin" }]
+                buttons: [{ label: "Chat Admin", value: "admin" }]
             }
         } else if (text.toLowerCase().includes("chatbot")) {
             reply = {
                 from: "bot",
                 type: "text",
-                text: "Kami juga menyediakan Chatbot otomatis 🤖"
+                text: "Kami juga menyediakan Chatbot otomatis"
             }
         } else if (text.toLowerCase() === "hai") {
             reply = {
