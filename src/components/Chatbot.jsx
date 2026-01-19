@@ -35,40 +35,65 @@ const Chatbot = () => {
         }, 800)
     }
 
-    const botReply = (text) => {
-        let reply
+    const botReply = async (text) => {
+    let reply
 
-        if (text.toLowerCase().includes("website")) {
-            reply = {
-                from: "bot",
-                type: "image",
-                url: dataImage.Proyek12,
-                text: "Ini contoh website kami 👇",
-                buttons: [{ label: "Chat Admin", value: "admin" }]
-            }
-        } else if (text.toLowerCase().includes("chatbot")) {
-            reply = {
-                from: "bot",
-                type: "text",
-                text: "Kami juga menyediakan Chatbot otomatis"
-            }
-        } else if (text.toLowerCase() === "hai") {
-            reply = {
-                from: "bot",
-                type: "text",
-                text: "Hallo 👋"
-            }
-        } else {
-            reply = {
-                from: "bot",
-                type: "text",
-                text: "Baik, bisa jelaskan lebih detail?"
-            }
+    if (text.toLowerCase().includes("website")) {
+        reply = {
+            from: "bot",
+            type: "image",
+            url: dataImage.Proyek12,
+            text: "Ini contoh website kami 👇",
+            buttons: [{ label: "Chat Admin", value: "admin" }]
         }
 
-        setMessages((prev) => [...prev, reply])
-        setLoading(false)
+    } else if (text.toLowerCase().includes("chatbot")) {
+        reply = {
+            from: "bot",
+            type: "text",
+            text: "Kami juga menyediakan Chatbot otomatis"
+        }
+
+    } else if (text.toLowerCase() === "hai") {
+        reply = {
+            from: "bot",
+            type: "text",
+            text: "Hallo 👋"
+        }
+
+    } else {
+        try {
+            const res = await fetch(
+  `/api/chat/v1?id=test&apikey=py-54NaBPjP2Py7UoyDHiqa6DgCxDRkhw&message=${encodeURIComponent(text)}`
+)
+
+
+            if (!res.ok) {
+            throw new Error(`HTTP ${res.status}`)
+        }
+        
+            const data = await res.json()
+
+            reply = {
+                from: "bot",
+                type: "text",
+                text: data?.message || "Maaf, saya tidak mengerti 😅"
+            }
+
+        } catch (error) {
+            console.error(error)
+            reply = {
+                from: "bot",
+                type: "text",
+                text: "Server sedang bermasalah ⚠️"
+            }
+        }
     }
+
+    setMessages((prev) => [...prev, reply])
+    setLoading(false)
+}
+
 
     const handleSubmit = (e) => {
         e.preventDefault()
