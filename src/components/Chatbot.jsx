@@ -64,7 +64,7 @@ const Chatbot = () => {
     } else {
         try {
             const res = await fetch(
-  `/api/chat/v1?id=test&apikey=py-54NaBPjP2Py7UoyDHiqa6DgCxDRkhw&message=${encodeURIComponent(text)}`
+  `http://15.235.182.106:30081/chat/v1?id=test&apikey=py-54NaBPjP2Py7UoyDHiqa6DgCxDRkhw&message=${encodeURIComponent(text)}`
 )
 
 
@@ -85,7 +85,7 @@ const Chatbot = () => {
             reply = {
                 from: "bot",
                 type: "text",
-                text: "Server sedang bermasalah ⚠️"
+                text: "Server sedang bermasalah ⚠️" + error
             }
         }
     }
